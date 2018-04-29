@@ -33,7 +33,7 @@ validate_args <- function(name, lstargs) {
     
   } else {
     
-    hc$x$hc_opts[[name]] <- list.merge(hc$x$hc_opts[[name]], list(...))
+    hc$x$hc_opts[[name]] <- modifyList(hc$x$hc_opts[[name]], list(...), keep.null = TRUE)
     
   }
   
